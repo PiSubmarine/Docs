@@ -1,0 +1,18 @@
+LSM303AGRTR
+	0011001b (0x19) - accelerometer
+	0011110b (0x1E) - magnetometer
+
+ABP2LANT060PG2A3XX
+	0x28
+	
+VL53L1CXV0FY/1
+	0x52
+	
+BQ76922RSNR
+	0x10
+	
+BQ25672RQMR
+	0x6B
+	
+MAX17261METD+
+	0x6C (or 0x36 for 7 MSb address)
