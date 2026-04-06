@@ -1,8 +1,11 @@
 TODO:
-+ Route USB data lines to a 2/3-pin JST connector, so RPi can use them.
-+ Add JST connector for RPi UART
-+ Move wire terminals to the front
-? Route USB lines to Chipset - bad idea without USB HUB
+> TLV70433DBVR is vulnerable to short circuits
+> Add on-board EEPROM
+> Ballast is always consuming power. Make STM32 digital pin power it instead of constant sourcing from 3.3V LDO.
+> Replace heavy-duty connectors with smaller ones. WJ500V-5.08-2P are too big and too tall.
+> Consider powering Chipset from Battery Charger. Powering only from TLV70433DBVR makes the sub unusable without connected battery. TLV70433DBVR is only powering the Chipset, so removing it is beneficial.
+> Rework USB bus. It seems like Battery Charger disturbes the lines. Maybe add jumbers that optionally disconnect BQ25792RQMR from USB?
+> Consider designing Lamps with embedded temperature sensors.
 
 Driving:
 4 thrusters, 2 work simultaneously.
