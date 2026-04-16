@@ -1,0 +1,86 @@
+digraph PiSubmarineRepositories {
+  rankdir=LR;
+  graph [overlap=false, splines=true];
+  node [shape=box, style=rounded];
+
+  "Bq25792" -> "I2C.Api";
+  "Bq25792" -> "RegUtils";
+  "Bq25792" -> "Units";
+
+  "Chipset.Api" -> "Error.Api";
+  "Chipset.Api" -> "RegUtils";
+  "Chipset.Api" -> "Units";
+
+  "Chipset.Client.I2C" -> "Chipset.Api";
+  "Chipset.Client.I2C" -> "Error.Api";
+  "Chipset.Client.I2C" -> "I2C.Api";
+  "Chipset.Client.I2C" -> "Time.Tickable.Api";
+
+  "Chipset.Engineering" -> "Bq25792";
+  "Chipset.Engineering" -> "Max1726";
+
+  "Drv8908" -> "GPIO.Api";
+  "Drv8908" -> "RegUtils";
+  "Drv8908" -> "SPI.Api";
+  "Drv8908" -> "Units";
+
+  "Drv8908.Cli" -> "Drv8908";
+  "Drv8908.Cli" -> "GPIO.Linux";
+  "Drv8908.Cli" -> "SPI.Linux";
+
+  "Drv8908.PowerManager" -> "Drv8908";
+
+  "GPIO.Linux" -> "GPIO.Api";
+
+  "I2C.Api" -> "Error.Api";
+
+  "I2C.Linux" -> "Error.Api";
+  "I2C.Linux" -> "I2C.Api";
+
+  "Max17261" -> "I2C.Api";
+  "Max17261" -> "RegUtils";
+  "Max17261" -> "Units";
+
+  "Motor.Bidirectional.Api" -> "Units";
+
+  "Motor.Drv8908" -> "Drv8908";
+  "Motor.Drv8908" -> "Drv8908.PowerManager";
+  "Motor.Drv8908" -> "Motor";
+  "Motor.Drv8908" -> "Motor.Bidirectional.Api";
+  "Motor.Drv8908" -> "Motor.Telemetry.Api";
+  "Motor.Drv8908" -> "Motor.Unidirectional.Api";
+  "Motor.Drv8908" -> "Time.Tickable.Api";
+
+  "Motor.Unidirectional.Api" -> "Units";
+
+  "PWM.Api" -> "Error.Api";
+  "PWM.Api" -> "Units";
+
+  "PWM.Linux" -> "Error.Api";
+  "PWM.Linux" -> "PWM.Api";
+
+  "RPi.Main" -> "Chipset.Api";
+  "RPi.Main" -> "Drv8908";
+  "RPi.Main" -> "Max1726";
+  "RPi.Main" -> "RPi.Logging";
+  "RPi.Main" -> "Units";
+
+  "SPI.Linux" -> "SPI.Api";
+
+  "Servo.Api" -> "Error.Api";
+  "Servo.Api" -> "Units";
+
+  "Servo.SG90" -> "Error.Api";
+  "Servo.SG90" -> "PWM.Api";
+  "Servo.SG90" -> "Servo.Api";
+
+  "Units" -> "Exceptions";
+
+  "Chipset" -> "Bq25792" [style=dashed, label="app"];
+  "Chipset" -> "Chipset.Api" [style=dashed, label="app"];
+  "Chipset.Client.I2C" -> "I2C.Linux" [style=dashed, label="app"];
+  "Motor.Drv8908" -> "GPIO.Linux" [style=dashed, label="app"];
+  "Motor.Drv8908" -> "SPI.Linux" [style=dashed, label="app"];
+  "Servo.SG90" -> "PWM.Linux" [style=dashed, label="app"];
+  "Servo.SG90" -> "PWM.Api" [style=dashed, label="test"];
+}

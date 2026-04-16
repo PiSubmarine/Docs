@@ -6,6 +6,10 @@ TODO:
 > Consider powering Chipset from Battery Charger. Powering only from TLV70433DBVR makes the sub unusable without connected battery. TLV70433DBVR is only powering the Chipset, so removing it is beneficial.
 > Rework USB bus. It seems like Battery Charger disturbes the lines. Maybe add jumbers that optionally disconnect BQ25792RQMR from USB?
 > Consider designing Lamps with embedded temperature sensors.
+> Split DRV_AUX1 into two fan connectors.
+> Fix uncovered vias
+> Add component keep-out zones around rails
+> Move BAT connector away from rail
 
 Driving:
 4 thrusters, 2 work simultaneously.
