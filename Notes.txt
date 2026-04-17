@@ -10,6 +10,9 @@ TODO:
 > Fix uncovered vias
 > Add component keep-out zones around rails
 > Move BAT connector away from rail
+> Redisign Lamp driver. Use a current source connected to VSYS, not Reg12.
+	TPS923654HMDMTR - 4A, 2.54$@10
+	TPS923652DMTR - 2A, 1.46$@10 (not recommended)
 
 Driving:
 4 thrusters, 2 work simultaneously.
