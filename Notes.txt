@@ -13,6 +13,7 @@ TODO:
 > Redisign Lamp driver. Use a current source connected to VSYS, not Reg12.
 	TPS923654HMDMTR - 4A, 2.54$@10
 	TPS923652DMTR - 2A, 1.46$@10 (not recommended)
+> Add Reg12V ADC to Chipset
 
 Driving:
 4 thrusters, 2 work simultaneously.
