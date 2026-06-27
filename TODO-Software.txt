@@ -10,3 +10,4 @@
 10. Add lamp multiplexer
 11. Fix pack voltage reporting - either multiply MAX reported voltage, or use BATCHG values.
 12. Rework LeaseId. Make it binary and (optionally) shorter.
+12. Add Fan
