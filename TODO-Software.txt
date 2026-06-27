@@ -1,0 +1,12 @@
+1. PiSubmarine::Control::Vertical::Ballast::Controller - do not return NotReady when Depth is not available. Return DeviceError with appropriate error_code.
+2. Normalize Gstreamer pipeline with external process head. Use factory pattern that accepts streaming profile.
+3. Add error formatter to Error.Api
+4. Add Network Telemetry to diagnose Operator <-> Drone communication.
+5. Add CPU Telemetry
+6. Add gRPC-based endpoint negotiation.
+7. Make Drone.Server.RPi installable as service.
+8. Set default ballast position to 0
+9. Add camera gimbal pitch translation from -90, +90 to 0, 180
+10. Add lamp multiplexer
+11. Fix pack voltage reporting - either multiply MAX reported voltage, or use BATCHG values.
+12. Rework LeaseId. Make it binary and (optionally) shorter.
